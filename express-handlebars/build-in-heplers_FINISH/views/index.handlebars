@@ -1,0 +1,18 @@
+<h1>hi I'm {{name}}</h1>
+
+<ul>
+  {{#each users2}}
+  <li>{{this}}</li>
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each users}}
+  <li>{{this.name}}
+    {{#if this.isLogin}}
+    <span style="color: green">online</span>
+    {{else}}
+    <span style="color: red">offline</span>
+    {{/if}} </li>
+  {{/each}}
+</ul>

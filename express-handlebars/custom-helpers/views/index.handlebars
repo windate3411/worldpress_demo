@@ -1,0 +1,24 @@
+<div class="container mt-5 text-center">
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list-group">
+        {{#each records}}
+        <li class="d-flex align-items-center">
+          {{{getImage this.category ../category_image}}}
+          <span>{{this.name}}</span>
+          <span>{{this.date}}</span>
+          <span>金額:{{this.amount}}元</span>
+          <div class="">
+            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#a{{{this.id}}}"
+              style="display:inline">
+              Delete
+            </button>
+            <a href="/record/edit/{{this.id}}" class="btn btn-success btn-sm">edit</a>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+  <h1>{{add_up 5 9}}</h1>
+</div>
